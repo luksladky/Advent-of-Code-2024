@@ -5,7 +5,7 @@ var inputPath = Path.Combine(projectRoot!, "input.txt");
 
 int totalSafe = 0;
 
-bool IsSafe(List<int> level)
+bool Check(List<int> level)
 {
     if (level.Count < 2)
         return false;
@@ -32,6 +32,23 @@ bool IsSafe(List<int> level)
 
     return true;
 }
+
+bool IsSafe(List<int> level)
+{
+    // part 1
+    if (Check(level)) 
+        return true;
+
+    // part 2
+    for (int removedIdx = 0; removedIdx < level.Count; removedIdx++)
+    {
+        if (Check(level.Where((record, idx) => idx != removedIdx).ToList()))
+            return true;
+    }
+
+    return false;
+}
+
 
 using var sr = new StreamReader(inputPath);
 while (sr.ReadLine() is string line)

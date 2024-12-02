@@ -2,46 +2,44 @@
 {
     public class FileReading
     {
-        /// <summary>
-        /// File.ReadLines, lazy
-        /// </summary>
-        /// <param name="fullPath"></param>
-        void ReadLines_1(string fullPath)
+
+        void ReadLines(string fullPath)
         {
-            foreach (var line in File.ReadAllLines(fullPath))
             {
-                ProcessLine(line);
+                // File.ReadLines, lazy
+                foreach (var line in File.ReadAllLines(fullPath))
+                {
+                    ProcessLine(line);
+                }
             }
-        }
-
-        /// <summary> 
-        /// StreamReader, lazy, flexible (encoding, etc)
-        /// </summary>
-        /// <param name="fullPath"></param>
-        void ReadLines_2(string fullPath)
-        {
-            using var sr = File.OpenText(fullPath);
-
-            string? line;
-            while ((line = sr.ReadLine()) != null)
             {
-                ProcessLine(line);
+                // StreamReader, lazy, flexible (encoding, etc)
+                using var sr = File.OpenText(fullPath);
+                string? line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    ProcessLine(line);
+                }
             }
-        }
-
-
-        /// <summary> 
-        /// StreamReader, lazy, flexible (encoding, etc) + pattern matching
-        /// </summary>
-        /// <param name="fullPath"></param>
-        void ReadLines_3(string fullPath)
-        {
-            using var sr = File.OpenText(fullPath);
-
-            // { } is match any object -> a non-null value
-            while (sr.ReadLine() is { } line)
             {
-                ProcessLine(line);
+                // StreamReader, lazy, flexible (encoding, etc) + pattern matching
+                using var sr2 = File.OpenText(fullPath);
+
+                // { } is match any object -> a non-null value
+                while (sr2.ReadLine() is { } line2)
+                {
+                    ProcessLine(line2);
+                }
+            }
+            {
+                // StreamReader, lazy, flexible (encoding, etc) + pattern matching
+                using var sr3 = File.OpenText(fullPath);
+
+                // { } is match any object -> a non-null value
+                while (sr3.ReadLine() is string line3)
+                {
+                    ProcessLine(line3);
+                }
             }
         }
 

@@ -1,4 +1,4 @@
-﻿namespace CsNotes
+﻿namespace CSUtils.Notes
 {
     public class FileReading
     {

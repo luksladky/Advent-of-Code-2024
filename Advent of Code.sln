@@ -5,11 +5,13 @@ VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-CS-Historian-Hysteria", "01-CS-Historian-Hysteria\01-CS-Historian-Hysteria.csproj", "{2713822D-51CF-4A60-857A-70B5857C64FC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsNotes", "CsNotes\CsNotes.csproj", "{8F9C6E2E-67AB-4567-B187-F7D2B7165B8D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSUtils", "CsNotes\CSUtils.csproj", "{8F9C6E2E-67AB-4567-B187-F7D2B7165B8D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-CS-Red-Nosed-Reports", "02-CS-Red-Nosed-Reports\02-CS-Red-Nosed-Reports.csproj", "{340AD259-5686-47FB-9760-CFC6527662D9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-CS-Null-It-Over", "03-CS-Null-It-Over\03-CS-Null-It-Over.csproj", "{95957D15-46C4-464D-B82F-FBA123D867A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04-CS-Ceres-Search", "04-CS-Ceres-Search\04-CS-Ceres-Search.csproj", "{BD3F37FF-0961-4505-8C45-BBDB43E80464}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{95957D15-46C4-464D-B82F-FBA123D867A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95957D15-46C4-464D-B82F-FBA123D867A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95957D15-46C4-464D-B82F-FBA123D867A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3F37FF-0961-4505-8C45-BBDB43E80464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3F37FF-0961-4505-8C45-BBDB43E80464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3F37FF-0961-4505-8C45-BBDB43E80464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3F37FF-0961-4505-8C45-BBDB43E80464}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
